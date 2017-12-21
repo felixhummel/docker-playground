@@ -2,11 +2,13 @@
 set -euo pipefail
 
 control_c() {
-    echo  # new line for ^C character that is printed
     echo "Exiting."
     exit 1
 }
-trap control_c SIGINT
+trap control_c SIGINT SIGTERM
+
+id
+pwd
 
 while true; do
   ls -la /var/local/data

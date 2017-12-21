@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  foo:
+    build: .
+    user: ${uid}:${gid}
+    volumes:
+      - ./dev/data:/var/local/data
