@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  foo:
+    build: .
+    user: "12345"
+    volumes:
+      - data:/var/local/data
+
+volumes:
+  data:
