@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  app:
+    image: debian:stretch
+    command: ls
+    volumes:
+      - ./my_volume:/vol
+    working_dir: /vol
