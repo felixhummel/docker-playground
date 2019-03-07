@@ -11,7 +11,8 @@ id
 pwd
 
 while true; do
-  ls -la /var/local/data
-  date > /var/local/data/hello
+  date | tee /var/local/data/hello
+  echo "Hello $(cat config)"
   sleep 1
 done
+

@@ -2,7 +2,11 @@ version: '3.4'
 
 services:
   foo:
-    build: .
-    user: ${uid}:${gid}
+    build:
+      context: .
+      args:
+        UID: ${MY_UID}
+        GID: ${MY_GID}
     volumes:
-      - ./dev/data:/var/local/data
+      - ./:/opt/project
+

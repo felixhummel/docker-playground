@@ -8,3 +8,6 @@ services:
 
 volumes:
   data:
+    labels:
+      - project=docker-playground
+      - example=hard-coded-uid
