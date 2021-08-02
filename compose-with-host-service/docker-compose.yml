@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+
+  curl:
+    image: curlimages/curl
+    command: ["sleep", "infinity"]
+    stop_signal: SIGKILL
+    extra_hosts:
+    - "host.docker.internal:host-gateway"
