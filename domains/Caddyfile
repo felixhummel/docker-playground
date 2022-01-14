@@ -1,0 +1,12 @@
+{
+	local_certs
+	ocsp_stapling off
+	auto_https off
+}
+:80 {
+	respond 200 {
+		body "Hello!
+"
+		close
+	}
+}

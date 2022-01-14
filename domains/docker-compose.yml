@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+  alpha:
+    build: .
+    image: playing-with-docker-compose/domains
+    domainname: blah.internal
+
+  beta:
+    build: .
+    image: playing-with-docker-compose/domains
+    domainname: blah.internal
